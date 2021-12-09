@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<div>
+    <input type="number"  id="soThuNhat" style="width: 150px" value="">
+    <input type="number"  id="soThuHai" style="width: 150px" value="">
+</div>
+<input type="button" id="cong" value="Addition(+)" onclick="phepCong()">
+<input type="button" id="tru" value="Subtraction(-)" onclick="phepTru()">
+<input type="button" id="nhan" value="Multiplication(X)" onclick="phepNhan()">
+<input type="button" id="chia" value="Division(/)" onclick="phepChia()">
+<p id="ketQua"></p>
+
+</body>
+</html>
+
+<script>
+    function phepCong() {
+        let a1 = parseFloat(document.getElementById("soThuNhat").value)
+        let a2 = parseFloat(document.getElementById("soThuHai").value)
+        tong = a1 + a2
+        document.getElementById("ketQua").innerHTML = "Reuslt Division: " + tong
+    }
+    function phepTru() {
+        let a1 = parseFloat(document.getElementById("soThuNhat").value)
+        let a2 = parseFloat(document.getElementById("soThuHai").value)
+        hieu = a1 - a2
+        document.getElementById("ketQua").innerHTML = "Reuslt Division: " + hieu
+
+    }    function phepNhan() {
+        let a1 = parseFloat(document.getElementById("soThuNhat").value)
+        let a2 = parseFloat(document.getElementById("soThuHai").value)
+        tich = a1 * a2
+        document.getElementById("ketQua").innerHTML = "Reuslt Division: " + tich
+    }    function phepChia() {
+        let a1 = parseFloat(document.getElementById("soThuNhat").value)
+        let a2 = parseFloat(document.getElementById("soThuHai").value)
+        thuong = a1 / a2
+        document.getElementById("ketQua").innerHTML = "Reuslt Division: " + thuong
+    }
+</script>
